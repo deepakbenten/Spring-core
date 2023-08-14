@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.w3.org/2001/XMLSchema-context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans	
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ https://www.springframework.org/schema/context
+ https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.springcore.ci.Certif" name="cert">
+		<constructor-arg value="Android using kotin" />
+	</bean>
+	<bean class="com.springcore.ci.Person" name="person1">
+		<constructor-arg value="Deepak kumar" />
+		<constructor-arg value="10" />
+		<constructor-arg ref="cert" />
+	</bean>
+	<bean class="com.springcore.ci.Addition" name="add">
+		<constructor-arg value="15" type="int" index="0" />
+		<constructor-arg value="12" type="int" index="1"/>
+	</bean>
+
+
+</beans>
